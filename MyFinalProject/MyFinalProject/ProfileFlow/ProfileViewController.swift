@@ -31,7 +31,6 @@ class ProfileViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        print(user)
     }
     
     @IBAction func switchModeButton(_ sender: Any) {
