@@ -8,10 +8,10 @@
 import UIKit
 
 final class User{
-    var name:String
-    var surname:String
-    var email:String
-    var bio:String
+    var name:String?
+    var surname:String?
+    var email:String?
+    var bio:String?
     
     init(name : String, surname : String,email:String,bio:String){
         self.name = name
@@ -20,7 +20,7 @@ final class User{
         self.bio = bio
     }
     init(){
-        self.name = "not value"
+        self.name
         self.surname = "not value"
         self.email = "not value"
         self.bio = "not value"

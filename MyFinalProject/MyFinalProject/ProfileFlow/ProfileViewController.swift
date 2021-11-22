@@ -15,17 +15,17 @@ class ProfileViewController:UIViewController{
         case edit
         case view
     }
-    var mode = ViewMode.edit
+    var mode = ViewMode.view
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var surnameTextField: UITextField!
-    @IBOutlet weak var bioTextView: UITextView!
-    @IBOutlet weak var agreeWithTermsAndCondLabel: UILabel!
-    @IBOutlet weak var agreeSwitch: UISwitch!
-    @IBOutlet weak var modeButton: UIButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var photoImageView: UIImageView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var surnameTextField: UITextField!
+    @IBOutlet private weak var bioTextView: UITextView!
+    @IBOutlet private weak var agreeWithTermsAndCondLabel: UILabel!
+    @IBOutlet private weak var agreeSwitch: UISwitch!
+    @IBOutlet private weak var modeButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -43,11 +43,11 @@ class ProfileViewController:UIViewController{
     }
     
     @IBAction func agreeSwitch(_ sender: UISwitch) {
-        if !sender.isOn{
-        modeButton.isEnabled = !sender.isOn
-    }else {
-        modeButton.isEnabled = true
-    }
+        if !sender.isOn {
+            modeButton.isEnabled = !sender.isOn
+        } else {
+            modeButton.isEnabled = true
+        }
     }
     
     private func setup(){
@@ -82,10 +82,21 @@ class ProfileViewController:UIViewController{
         agreeSwitch.isHidden = true
         agreeSwitch.isOn = false
         mode = .edit
-        user.email = emailTextField.text!
-        user.name = nameTextField.text!
-        user.surname = surnameTextField.text!
-        user.bio = bioTextView.text!
+        if emailTextField.text != nil{
+            user.email = emailTextField.text
+        }else{ return }
+        
+        if nameTextField.text != nil{
+            user.name = nameTextField.text
+        }else{ return }
+        
+        if surnameTextField.text != nil{
+            user.surname = surnameTextField.text
+        }else{ return }
+        
+        if bioTextView.text != nil{
+            user.bio = bioTextView.text
+        }else{ return }
     }
     
     @objc private func hideKeyboard(){
