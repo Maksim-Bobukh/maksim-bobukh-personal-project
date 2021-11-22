@@ -19,6 +19,7 @@
 		2D5D52CE274BC1BB00B9D82F /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D52CD274BC1BB00B9D82F /* Collection.storyboard */; };
 		2D5D52D0274BC1D600B9D82F /* TableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D52CF274BC1D600B9D82F /* TableViewViewController.swift */; };
 		2D5D52D2274BC1EE00B9D82F /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D52D1274BC1EE00B9D82F /* TableView.storyboard */; };
+		2D5D52D4274C26B200B9D82F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D52D3274C26B200B9D82F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2D5D52CD274BC1BB00B9D82F /* Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collection.storyboard; sourceTree = "<group>"; };
 		2D5D52CF274BC1D600B9D82F /* TableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewController.swift; sourceTree = "<group>"; };
 		2D5D52D1274BC1EE00B9D82F /* TableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableView.storyboard; sourceTree = "<group>"; };
+		2D5D52D3274C26B200B9D82F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				2D5D52C7274BC18500B9D82F /* ProfileViewController.swift */,
 				2D5D52C9274BC19800B9D82F /* Profile.storyboard */,
+				2D5D52D3274C26B200B9D82F /* User.swift */,
 			);
 			path = ProfileFlow;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				2D5D52B2274BBEC600B9D82F /* SceneDelegate.swift in Sources */,
 				2D5D52D0274BC1D600B9D82F /* TableViewViewController.swift in Sources */,
 				2D5D52CC274BC1AC00B9D82F /* CollectionViewController.swift in Sources */,
+				2D5D52D4274C26B200B9D82F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
