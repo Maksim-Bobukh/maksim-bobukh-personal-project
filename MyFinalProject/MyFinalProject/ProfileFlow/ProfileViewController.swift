@@ -44,7 +44,7 @@ class ProfileViewController:UIViewController{
     
     @IBAction func agreeSwitch(_ sender: UISwitch) {
         if !sender.isOn{
-        modeButton.isEnabled = false
+        modeButton.isEnabled = !sender.isOn
     }else {
         modeButton.isEnabled = true
     }
