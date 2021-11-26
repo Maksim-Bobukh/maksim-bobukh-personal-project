@@ -28,6 +28,8 @@ class ProfileViewController:UIViewController{
     @IBOutlet private weak var modeButton: UIButton!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -49,6 +51,26 @@ class ProfileViewController:UIViewController{
             modeButton.isEnabled = true
         }
     }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: .none))
+        alert.addAction(UIAlertAction(title: "Logout", style: .destructive, handler:{ (action) in
+            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "AuthViewController") as! AuthViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+        }))
+        present(alert,animated: true)
+    }
+    
+   
+    @IBAction func LogoutButtonClicked(_ sender: Any) {
+        showAlert()
+    }
+    
+    
+    
     
     private func setup(){
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
