@@ -13,16 +13,6 @@ final class User{
     var email:String?
     var bio:String?
     
-    init(name : String, surname : String,email:String,bio:String){
-        self.name = name
-        self.surname = surname
-        self.email = email
-        self.bio = bio
-    }
-    init(){
-        self.name
-        self.surname = "not value"
-        self.email = "not value"
-        self.bio = "not value"
-    }
+    
+    init(){}
 }
