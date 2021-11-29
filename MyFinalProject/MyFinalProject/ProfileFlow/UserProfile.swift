@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class User{
+final class UserProfile{
     var name:String?
     var surname:String?
     var email:String?

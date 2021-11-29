@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController:UIViewController{
     
-    var user = User()
+    var userProfile = UserProfile()
     
     enum ViewMode{
         case edit
@@ -105,19 +105,19 @@ class ProfileViewController:UIViewController{
         agreeSwitch.isOn = false
         mode = .edit
         if emailTextField.text != nil{
-            user.email = emailTextField.text
+            userProfile.email = emailTextField.text
         }else{ return }
         
         if nameTextField.text != nil{
-            user.name = nameTextField.text
+            userProfile.name = nameTextField.text
         }else{ return }
         
         if surnameTextField.text != nil{
-            user.surname = surnameTextField.text
+            userProfile.surname = surnameTextField.text
         }else{ return }
         
         if bioTextView.text != nil{
-            user.bio = bioTextView.text
+            userProfile.bio = bioTextView.text
         }else{ return }
     }
     
