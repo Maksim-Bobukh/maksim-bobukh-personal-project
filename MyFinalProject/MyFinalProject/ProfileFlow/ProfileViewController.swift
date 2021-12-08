@@ -84,7 +84,7 @@ class ProfileViewController:UIViewController{
         mode = .edit
         if emailTextField.text != nil{
             user.email = emailTextField.text
-        }else{ return }
+        }
         
         if nameTextField.text != nil{
             user.name = nameTextField.text
