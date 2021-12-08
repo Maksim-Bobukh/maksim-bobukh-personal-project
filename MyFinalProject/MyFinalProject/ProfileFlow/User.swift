@@ -14,5 +14,4 @@ final class User{
     var bio:String?
     
     
-    init(){}
 }
