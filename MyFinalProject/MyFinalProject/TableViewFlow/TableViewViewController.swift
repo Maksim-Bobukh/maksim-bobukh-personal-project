@@ -41,10 +41,10 @@ class TableViewViewController:UIViewController{
 extension TableViewViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let userInf = users[indexPath.row]
-    
+        
         pushUserVC(user: userInf)
     }
-    func pushUserVC(user: User){
+    func pushUserVC(user:User){
         //let userInf = users[indexPath.row]
         let storyboard = UIStoryboard(name: "SelectedUser", bundle: .main)
         let viewController = storyboard.instantiateViewController(identifier: "SelectedUserViewController") as! SelectedUserViewController

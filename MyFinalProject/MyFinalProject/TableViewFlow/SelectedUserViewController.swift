@@ -20,7 +20,7 @@ class SelectedUserViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDetailsScreen(user: user!)
+        //setupDetailsScreen(user: user!)
     }
     
     func setupDetailsScreen(user:User){
