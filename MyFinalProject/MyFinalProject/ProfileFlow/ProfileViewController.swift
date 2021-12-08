@@ -88,15 +88,15 @@ class ProfileViewController:UIViewController{
         
         if nameTextField.text != nil{
             user.name = nameTextField.text
-        }else{ return }
+        }else{  }
         
         if surnameTextField.text != nil{
             user.surname = surnameTextField.text
-        }else{ return }
+        }else{  }
         
         if bioTextView.text != nil{
             user.bio = bioTextView.text
-        }else{ return }
+        }else{ }
     }
     
     @objc private func hideKeyboard(){
