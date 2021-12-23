@@ -45,12 +45,12 @@ extension TableViewViewController:UITableViewDelegate{
         pushUserVC(user: userInf)
     }
     func pushUserVC(user:User){
-        //let userInf = users[indexPath.row]
+        
         let storyboard = UIStoryboard(name: "SelectedUser", bundle: .main)
         let viewController = storyboard.instantiateViewController(identifier: "SelectedUserViewController") as! SelectedUserViewController
+        viewController.user = user
         self.navigationController?.pushViewController(viewController, animated: true)
-        viewController.setupDetailsScreen(user: user)
-        //viewController.setupDetailsScreen(user:userInf)
+        
     }
 }
 

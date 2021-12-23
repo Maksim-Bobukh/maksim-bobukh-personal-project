@@ -9,7 +9,7 @@ import UIKit
 
 class SelectedUserViewController:UIViewController{
     static let Identifier = "SelectedUserViewController"
-    private var user:User?
+    var user:User?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -20,11 +20,11 @@ class SelectedUserViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupDetailsScreen(user: user!)
+        setupDetailsScreen(user: user!)
     }
     
     func setupDetailsScreen(user:User){
-         self.user = user
+         
          nameLabel.text = user.name
          surnameLabel.text = user.surname
          ageLabel.text = String(user.age)
