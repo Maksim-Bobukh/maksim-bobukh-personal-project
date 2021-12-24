@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D20ABA22775111C0046E885 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D20ABA12775111C0046E885 /* Cat.swift */; };
+		2D20ABA4277512FD0046E885 /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D20ABA3277512FD0046E885 /* CatCollectionViewCell.swift */; };
 		2D3BEDC7275120F6009881C0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BEDC5275120F6009881C0 /* TableViewCell.swift */; };
 		2D3BEDC8275120F6009881C0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3BEDC6275120F6009881C0 /* TableViewCell.xib */; };
 		2D3BEDCA27515C71009881C0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BEDC927515C71009881C0 /* User.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D20ABA12775111C0046E885 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		2D20ABA3277512FD0046E885 /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D3BEDC5275120F6009881C0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2D3BEDC6275120F6009881C0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		2D3BEDC927515C71009881C0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -129,7 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				2D5D52CB274BC1AC00B9D82F /* CollectionViewController.swift */,
+				2D20ABA12775111C0046E885 /* Cat.swift */,
 				2D5D52CD274BC1BB00B9D82F /* Collection.storyboard */,
+				2D20ABA3277512FD0046E885 /* CatCollectionViewCell.swift */,
 			);
 			path = CollectionViewControllerFlow;
 			sourceTree = "<group>";
@@ -242,11 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5D52B4274BBEC600B9D82F /* ViewController.swift in Sources */,
+				2D20ABA4277512FD0046E885 /* CatCollectionViewCell.swift in Sources */,
 				2D5D52B0274BBEC600B9D82F /* AppDelegate.swift in Sources */,
 				2D5D52DF274CFC4300B9D82F /* DummyDetailsScreenViewController.swift in Sources */,
 				2D5D52C8274BC18500B9D82F /* ProfileViewController.swift in Sources */,
 				2D5D52B2274BBEC600B9D82F /* SceneDelegate.swift in Sources */,
 				2D3BEDC7275120F6009881C0 /* TableViewCell.swift in Sources */,
+				2D20ABA22775111C0046E885 /* Cat.swift in Sources */,
 				2D5D52D0274BC1D600B9D82F /* TableViewViewController.swift in Sources */,
 				2D5D52CC274BC1AC00B9D82F /* CollectionViewController.swift in Sources */,
 				2D3BEDCE27515F2B009881C0 /* SelectedUserViewController.swift in Sources */,
