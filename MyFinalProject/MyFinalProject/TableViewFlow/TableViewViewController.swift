@@ -6,86 +6,90 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class TableViewViewController:UIViewController{
-    @IBOutlet weak var authButton: UIButton!
+    
+    private var phohos: [PhotoDescription] = []
+    private let url = "https://jsonplaceholder.typicode.com/photos"
+    
     @IBOutlet weak var tableView: UITableView!
     
-    private var users = createUsers()
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
+        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+        self.fetchData()
+    }
+    
+    private func fetchData() {
+        AF.request(self.url,method: .get).responseDecodable(of: [PhotoDescription].self) { [weak self] response in
+            self?.phohos = response.value ?? []
+            self?.tableView.reloadData()
+        }
     }
     
     @objc private func refreshUsers(_ sender: UIRefreshControl){
-        users.shuffle()
+        phohos .shuffle()
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {[weak self] in
             sender.endRefreshing()
             self?.tableView.reloadData()
         }
     }
-    
-    func pushAuthVc(){
-        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "AuthViewController") as! AuthViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    @IBAction func authButtonClicked(_ sender: Any) {
-        pushAuthVc()
-    }
 }
     
 extension TableViewViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let userInf = users[indexPath.row]
-        
-        pushUserVC(user: userInf)
+        let photosInf = phohos[indexPath.row]
+
+        pushUserVC(photoDetails: photosInf)
     }
-    func pushUserVC(user:User){
-        
-        let storyboard = UIStoryboard(name: "SelectedUser", bundle: .main)
-        let viewController = storyboard.instantiateViewController(identifier: "SelectedUserViewController") as! SelectedUserViewController
-        viewController.user = user
+    func pushUserVC(photoDetails:PhotoDescription){
+
+        let storyboard = UIStoryboard(name: "SelectedPhoto", bundle: .main)
+        let viewController = storyboard.instantiateViewController(identifier: "SelectedPhotoViewController") as! SelectedPhotoViewController
+        viewController.photo = photoDetails
         self.navigationController?.pushViewController(viewController, animated: true)
-        
+
     }
 }
 
 extension TableViewViewController:UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return phohos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as! TableViewCell
-        let user = users[indexPath.row]
-        cell.setup(user: user)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell{
+            cell.photo = phohos[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
 private extension TableViewViewController{
     
-    static func createUsers() -> [User]{
-        return[
-            User(name: "Adam", surname: "Smith", iconImage:UIImage(named: "man")!,age: 25,hight: 185,status: "status: along"),
-            User(name: "Pawel", surname: "Groove", iconImage: UIImage(named: "man")!,age: 27,hight: 175,status: "status: married"),
-            User(name: "Maria", surname: "Pavlova", iconImage: UIImage(named: "woman")!,age: 23,hight: 169,status: "status: along"),
-            User(name: "Liza", surname: "Kovalenko", iconImage: UIImage(named: "woman")!,age: 18,hight: 160,status: "status: in relationship"),
-            User(name: "Tom", surname: "Soer", iconImage: UIImage(named: "man")!,age: 20,hight: 190,status: "status: along"),
-            User(name: "Julia", surname: "Melnikova", iconImage: UIImage(named: "woman")!,age: 30,hight: 173,status: "status: married")
-        ].sorted(by: {$0.name > $1.name})
-    }
+    
     func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 70
+        tableView.rowHeight = 150
         let nib = UINib(nibName: TableViewCell.reuseIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier:TableViewCell.reuseIdentifier)
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshUsers(_:)), for: .valueChanged)
     }
 }
+
+
+

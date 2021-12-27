@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,10 +58,11 @@
                             <constraint firstItem="oFW-tK-AM8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="uhK-4p-rcN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome!" largeTitleDisplayMode="always" id="p8s-gi-TmD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="56.919642857142854"/>
+            <point key="canvasLocation" x="944.92753623188412" y="56.919642857142854"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="Fp0-S9-wlZ">
@@ -71,7 +72,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSr-3N-J2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="-3"/>
+            <point key="canvasLocation" x="1502.8985507246377" y="-3.3482142857142856"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="dIP-lh-IRX">
@@ -81,7 +82,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba2-IB-klQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589" y="113"/>
+            <point key="canvasLocation" x="1497.8260869565217" y="112.5"/>
         </scene>
     </scenes>
     <resources>

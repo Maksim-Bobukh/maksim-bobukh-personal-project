@@ -12,16 +12,15 @@ class TableViewCell: UITableViewCell {
     static let reuseIdentifier = "TableViewCell"
     
     @IBOutlet weak var iconPhotoimage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    private var user: User?
-    
-    func setup(user: User){
-        self.user = user
-        nameLabel.text = user.name
-        surnameLabel.text = user.surname
-        iconPhotoimage.image = user.iconImage
+    var photo: PhotoDescription! {
+        didSet{
+            self.idLabel.text = String(self.photo.id)
+            self.titleLabel.text = self.photo.title
+            self.iconPhotoimage.setImage(imageURL: self.photo.url)
+        }
     }
     
 }

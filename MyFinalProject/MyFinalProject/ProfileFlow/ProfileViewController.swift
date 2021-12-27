@@ -27,9 +27,6 @@ class ProfileViewController:UIViewController{
     @IBOutlet private weak var agreeSwitch: UISwitch!
     @IBOutlet private weak var modeButton: UIButton!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
