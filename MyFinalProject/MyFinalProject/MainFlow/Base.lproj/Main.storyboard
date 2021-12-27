@@ -41,19 +41,19 @@
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Bpd-Up-zZh" kind="relationship" relationship="viewControllers" id="Nv3-kN-OQt"/>
                         <segue destination="rzi-a0-qO7" kind="relationship" relationship="viewControllers" id="wWf-MR-Lh6"/>
-                        <segue destination="L1v-Z4-aR2" kind="relationship" relationship="viewControllers" id="0yL-jC-KXp"/>
+                        <segue destination="Bpd-Up-zZh" kind="relationship" relationship="viewControllers" id="ppr-cR-iv5"/>
+                        <segue destination="L1v-Z4-aR2" kind="relationship" relationship="viewControllers" id="nuR-bE-4kF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWF-69-IGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="38" y="106"/>
         </scene>
-        <!--ProfileID-->
+        <!--Profile-->
         <scene sceneID="TDG-Wc-2Y3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileID" id="L1v-Z4-aR2" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="SetupNavController" storyboardName="Profile" id="L1v-Z4-aR2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="nkK-3a-UXe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80H-7e-9nV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
